@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XenoGuardConnectMain.SubViews.MainMenuPage"
+             xmlns:local="clr-namespace:XenoGuardConnectMain"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <StackLayout>
+        <Frame BackgroundColor="Transparent" Padding="24" CornerRadius="0">
+            <Label Text="" HorizontalTextAlignment="Start" TextColor="White" FontSize="14"/>
+        </Frame>
+
+        <Image Source="Logo" HeightRequest="150" Margin="0, 70, 0, 70"/>
+        <Label Text="Version 1.0" HorizontalTextAlignment="Start" TextColor="Gray" FontSize="14" HorizontalOptions="Center"/>
+        <dxe:SimpleButton Text="Messages" Clicked="ButtonNavigateToMessages" Margin="20, 0, 20, 0"/>
+        <dxe:SimpleButton Text="Settings" Clicked="ButtonNavigateToSettings" Margin="20, 0, 20, 0"/>
+     </StackLayout>
+</ContentPage>

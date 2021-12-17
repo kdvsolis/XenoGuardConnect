@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<MycroTools FileVersion="4.0" xmlns="http://www.schemas.mycrotools.com/2020/xws">
+  <Workspace Company="MycroTools GmbH">
+    <Description>MycroTools XenoGuard Examples</Description>
+    <Extensions />
+    <ExecutionConfigurations>
+      <ExecutionConfiguration Name="Development" IgnoreBreakpoints="false" IsLoggingEnabled="false" IsSchedulerEnabled="false" IsLoggingFilterEnabled="false" ErrorLevelOfDisabledActionSteps="Error" ErrorLevelOfUnknownActionSteps="Error" ActionStepDelayTime="0" />
+      <ExecutionConfiguration Name="Production" IgnoreBreakpoints="true" IsLoggingEnabled="false" IsSchedulerEnabled="true" IsLoggingFilterEnabled="false" ErrorLevelOfDisabledActionSteps="Warning" ErrorLevelOfUnknownActionSteps="Warning" ActionStepDelayTime="0" />
+    </ExecutionConfigurations>
+    <SelectedExecutionConfiguration>
+      <Value>Development</Value>
+    </SelectedExecutionConfiguration>
+    <Instruments />
+  </Workspace>
+</MycroTools>

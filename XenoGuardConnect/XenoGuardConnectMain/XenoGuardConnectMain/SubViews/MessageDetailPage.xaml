@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XenoGuardConnectMain.SubViews.MessageDetailPage"
+             xmlns:local="clr-namespace:XenoGuardConnectMain"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <StackLayout>
+        <Grid BackgroundColor="#2088ff" Margin="10, 10, 10, 0"  >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="15*" />
+                <RowDefinition Height="65*" />
+                <RowDefinition Height="12.5*" />
+                <RowDefinition Height="12.5*" />
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" BackgroundColor="#2088ff" BorderColor="White" CornerRadius="10" HasShadow="True" Margin="5,5,5,5">
+                <Label x:Name="DateTime" />
+            </Frame>
+            <Frame Grid.Row="1" BackgroundColor="#2088ff"  BorderColor="White" CornerRadius="10" HasShadow="True" Margin="5,5,5,5">
+                <Label x:Name="Type" />
+            </Frame>
+            <Frame Grid.Row="2" BackgroundColor="#2088ff"  BorderColor="White" CornerRadius="10" HasShadow="True" Margin="5,5,5,5">
+                <Label x:Name="Message" />
+            </Frame>
+
+            <dxe:SimpleButton x:Name="btnOK" Grid.Row="3" Text="Yes" Clicked="ButtonSendYes" Margin="5,5,5,5" BorderColor="White" CornerRadius="10" BorderThickness="2" />
+            <dxe:SimpleButton x:Name="btnCancel" Grid.Row="4" Text="No" Clicked="ButtonSendNo" Margin="5,5,5,5" BorderColor="White" CornerRadius="10" BorderThickness="2" />
+        </Grid>
+        
+        <StackLayout VerticalOptions="End" Margin="10, 0, 10, 15">
+            <dxe:SimpleButton Text="Back" BorderColor="White" CornerRadius="10" BorderThickness="2" Clicked="ButtonNavigateBack" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

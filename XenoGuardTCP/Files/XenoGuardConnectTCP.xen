@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<MycroTools FileVersion="4.7" xmlns="http://www.schemas.mycrotools.com/2020/xen">
+  <ActionScript>
+    <Header />
+    <ActionSteps>
+      <ActionStep Id="645574f1-fd09-497e-9b78-485e32fa5cb1" GroupType="MycroTools.Programming" StepType="DefineVariable">
+        <Arguments>
+          <Parameter Name="Context Scope" ContextScope="Fixed">
+            <Value>Local</Value>
+          </Parameter>
+          <Parameter Name="Context Type" ContextScope="Fixed">
+            <Value>Variables</Value>
+          </Parameter>
+          <Parameter Name="Context Identifier" ContextScope="Fixed">
+            <Value>TcpServer_Name</Value>
+          </Parameter>
+          <Parameter Name="Read Only" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Static" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Data Type" ContextScope="Fixed">
+            <Value>Text</Value>
+          </Parameter>
+          <Parameter Name="Value" ContextScope="Fixed">
+            <Value>XenoGuard Server</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="0180d1f6-1e3f-4124-a31c-ac17c3d4eecd" GroupType="MycroTools.Programming" StepType="DefineVariable">
+        <Arguments>
+          <Parameter Name="Context Scope" ContextScope="Fixed">
+            <Value>Local</Value>
+          </Parameter>
+          <Parameter Name="Context Type" ContextScope="Fixed">
+            <Value>Variables</Value>
+          </Parameter>
+          <Parameter Name="Context Identifier" ContextScope="Fixed">
+            <Value>TcpServer_Password</Value>
+          </Parameter>
+          <Parameter Name="Read Only" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Static" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Data Type" ContextScope="Fixed">
+            <Value>Text</Value>
+          </Parameter>
+          <Parameter Name="Value" ContextScope="Fixed">
+            <Value>1234</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="1cab2c6c-621e-4a10-8974-a9dc8d2e5bc5" GroupType="MycroTools.Programming" StepType="DefineVariable">
+        <Arguments>
+          <Parameter Name="Context Scope" ContextScope="Fixed">
+            <Value>Local</Value>
+          </Parameter>
+          <Parameter Name="Context Type" ContextScope="Fixed">
+            <Value>Variables</Value>
+          </Parameter>
+          <Parameter Name="Context Identifier" ContextScope="Fixed">
+            <Value>TcpServer_Port</Value>
+          </Parameter>
+          <Parameter Name="Read Only" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Static" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Data Type" ContextScope="Fixed">
+            <Value>UnsignedNumber</Value>
+          </Parameter>
+          <Parameter Name="Value" ContextScope="Fixed">
+            <Value>10000</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="e1289af7-e443-4ad8-890f-40697fa587de" GroupType="MycroTools.Programming" StepType="DefineVariable">
+        <Arguments>
+          <Parameter Name="Context Scope" ContextScope="Fixed">
+            <Value>Local</Value>
+          </Parameter>
+          <Parameter Name="Context Type" ContextScope="Fixed">
+            <Value>Variables</Value>
+          </Parameter>
+          <Parameter Name="Context Identifier" ContextScope="Fixed">
+            <Value>IsLogged</Value>
+          </Parameter>
+          <Parameter Name="Read Only" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Static" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+          <Parameter Name="Data Type" ContextScope="Fixed">
+            <Value>Bool</Value>
+          </Parameter>
+          <Parameter Name="Value" ContextScope="Fixed">
+            <Value>False</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="f68cdb66-08f7-47b7-a9f0-8f11710f7932" GroupType="MycroTools.Programming" StepType="Comment" CommentLevel="1">
+        <Arguments>
+          <Parameter Name="Comment" ContextScope="Fixed">
+            <Value>Start the server</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="c1708445-9c7e-48df-8876-aacf1d775853" GroupType="MycroTools.Windows" StepType="Tcp Server">
+        <Arguments>
+          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+            <Value />
+          </Parameter>
+          <Parameter Name="Password" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Password">
+            <Value />
+          </Parameter>
+          <Parameter Name="Port" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Port">
+            <Value>0</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="82068be7-11ab-481b-8870-6b2b36e217a3" GroupType="MycroTools.Programming" StepType="Label">
+        <Arguments>
+          <Parameter Name="Context Identifier" ContextScope="Fixed">
+            <Value>Label 1</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="3b44d4f9-f28c-4c3c-acf0-5fe06847b9cb" GroupType="MycroTools.Windows" StepType="Tcp Server Receive">
+        <Arguments>
+          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+            <Value />
+          </Parameter>
+        </Arguments>
+        <Results>
+          <Parameter Name="Message Count" ContextScope="Fixed" Id="3dffb010-dda8-4521-90ca-7d0fce0e93f9">
+            <Value>0</Value>
+          </Parameter>
+          <Parameter Name="Messages" ContextScope="Fixed" Id="3ce8f1a7-5e06-4f5a-a363-758547f1ae1c">
+            <Parameters>
+              <Parameter Name="Message 0" ContextScope="Fixed">
+                <Parameters>
+                  <Parameter Name="Address" ContextScope="Fixed">
+                    <Value />
+                  </Parameter>
+                  <Parameter Name="Client Port" ContextScope="Fixed">
+                    <Value>0</Value>
+                  </Parameter>
+                  <Parameter Name="Tag" ContextScope="Fixed">
+                    <Value />
+                  </Parameter>
+                  <Parameter Name="Data" ContextScope="Fixed">
+                    <Value />
+                  </Parameter>
+                  <Parameter Name="Valid" ContextScope="Fixed">
+                    <Value>False</Value>
+                  </Parameter>
+                  <Parameter Name="Count" ContextScope="Fixed">
+                    <Value>0</Value>
+                  </Parameter>
+                </Parameters>
+              </Parameter>
+            </Parameters>
+          </Parameter>
+        </Results>
+      </ActionStep>
+      <ActionStep Id="fb9cbadb-6098-4945-8bc7-c24f54ae3ae1" GroupType="MycroTools.Programming" StepType="Comment" CommentLevel="1">
+        <Arguments>
+          <Parameter Name="Comment" ContextScope="Fixed">
+            <Value>Client has sent a message</Value>
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+      <ActionStep Id="59c9c908-3a55-4ef1-9e7e-b18ba86406ee" GroupType="MycroTools.Programming" StepType="IfElse">
+        <Branches>
+          <Branch>
+            <Condition>
+              <Expression Type="IsGreater">
+                <UnaryOperator Type="None" />
+                <ExpressionItem Type="ActionStep" Position="Left">
+                  <Parameters>
+                    <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                      <Value>3b44d4f9-f28c-4c3c-acf0-5fe06847b9cb</Value>
+                    </Parameter>
+                    <Parameter Name="Search Target" ContextScope="Fixed">
+                      <Value>ResultList</Value>
+                    </Parameter>
+                    <Parameter Name="Search List" ContextScope="Fixed">
+                      <Parameters>
+                        <Parameter Name="Message Count" ContextScope="Fixed" RefId="3dffb010-dda8-4521-90ca-7d0fce0e93f9">
+                          <Value>Message Count</Value>
+                        </Parameter>
+                      </Parameters>
+                    </Parameter>
+                  </Parameters>
+                </ExpressionItem>
+                <ExpressionItem Type="FixedValue" Position="Right">
+                  <Parameters>
+                    <Parameter Name="FixedValue" ContextScope="Fixed">
+                      <Value>0</Value>
+                    </Parameter>
+                  </Parameters>
+                </ExpressionItem>
+              </Expression>
+            </Condition>
+            <ActionSteps>
+              <ActionStep Id="be7aa06b-7865-4d61-8dfb-07f486eb56c1" GroupType="MycroTools.Programming" StepType="Comment" CommentLevel="1">
+                <Arguments>
+                  <Parameter Name="Comment" ContextScope="Fixed">
+                    <Value>Send responses</Value>
+                  </Parameter>
+                </Arguments>
+              </ActionStep>
+              <ActionStep Id="2506d422-ca01-469b-b8b2-5f6189188f05" GroupType="MycroTools.Programming" StepType="ForEach">
+                <Arguments>
+                  <Parameter Name="ListReference" ContextScope="Reference">
+                    <Reference>
+                      <Parameters>
+                        <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                          <Value>3b44d4f9-f28c-4c3c-acf0-5fe06847b9cb</Value>
+                        </Parameter>
+                        <Parameter Name="Search Target" ContextScope="Fixed">
+                          <Value>ResultList</Value>
+                        </Parameter>
+                        <Parameter Name="Search List" ContextScope="Fixed">
+                          <Parameters>
+                            <Parameter Name=" 0" ContextScope="Fixed" RefId="3ce8f1a7-5e06-4f5a-a363-758547f1ae1c">
+                              <Value>Messages</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Value>ResultList</Value>
+                        </Parameter>
+                      </Parameters>
+                    </Reference>
+                    <Value />
+                  </Parameter>
+                </Arguments>
+                <Results>
+                  <Parameter Name="Data" ContextScope="Fixed">
+                    <ParameterTemplate TemplateName="Row" MaxTemplateClones="1" MinTemplateClones="0" IsSearchList="False" IsSubstitute="False" ValueType="UnsignedNumber" ContextScopeAllowed="Fixed">
+                      <Parameter Name="Row" IsNameNumbered="false" ValueType="UnsignedNumber" ContextScope="Fixed">
+                        <Parameters Orientation="Vertical">
+                          <Parameter Name="Address" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Client Port" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Tag" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Data" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Valid" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Count" IsNameNumbered="false" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                        </Parameters>
+                        <Value>0</Value>
+                      </Parameter>
+                    </ParameterTemplate>
+                    <Parameters>
+                      <Parameter Name="Row" ContextScope="Fixed">
+                        <Parameters>
+                          <Parameter Name="Address" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Client Port" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Tag" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Data" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Valid" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Count" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                        </Parameters>
+                        <Value>0</Value>
+                      </Parameter>
+                    </Parameters>
+                  </Parameter>
+                </Results>
+                <Branches>
+                  <Branch>
+                    <ActionSteps>
+                      <ActionStep Id="1f02ed98-2bf2-4030-82e3-5f7c95496aef" GroupType="MycroTools.Programming" StepType="DefineVariable">
+                        <Arguments>
+                          <Parameter Name="Context Scope" ContextScope="Fixed">
+                            <Value>Local</Value>
+                          </Parameter>
+                          <Parameter Name="Context Type" ContextScope="Fixed">
+                            <Value>Variables</Value>
+                          </Parameter>
+                          <Parameter Name="Context Identifier" ContextScope="Fixed">
+                            <Value>Data</Value>
+                          </Parameter>
+                          <Parameter Name="Read Only" ContextScope="Fixed">
+                            <Value>False</Value>
+                          </Parameter>
+                          <Parameter Name="Static" ContextScope="Fixed">
+                            <Value>False</Value>
+                          </Parameter>
+                          <Parameter Name="Data Type" ContextScope="Fixed">
+                            <Value>Text</Value>
+                          </Parameter>
+                          <Parameter Name="Value" ContextScope="Fixed">
+                            <Value>testuser|1234</Value>
+                          </Parameter>
+                        </Arguments>
+                      </ActionStep>
+                      <ActionStep Id="4ed0076a-b50e-4c9c-96a6-35093cd06d2c" GroupType="MycroTools.Programming" StepType="IdentifierSet">
+                        <Arguments>
+                          <Parameter Name="Target" ContextScope="Local" ContextType="Variables" ContextIdentifier="Data">
+                            <Value />
+                          </Parameter>
+                          <Parameter Name="Source" ContextScope="Reference">
+                            <Reference>
+                              <Parameters>
+                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                </Parameter>
+                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                  <Value>ResultList</Value>
+                                </Parameter>
+                                <Parameter Name="Search List" ContextScope="Fixed">
+                                  <Parameters>
+                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                      <Value>Data</Value>
+                                    </Parameter>
+                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                      <Value>Row</Value>
+                                    </Parameter>
+                                    <Parameter Name=" 2" ContextScope="Fixed">
+                                      <Value>Data</Value>
+                                    </Parameter>
+                                  </Parameters>
+                                  <Value>ResultList</Value>
+                                </Parameter>
+                              </Parameters>
+                            </Reference>
+                            <Value />
+                          </Parameter>
+                        </Arguments>
+                        <Results>
+                          <Parameter Name="Value" ContextScope="Fixed">
+                            <Value />
+                          </Parameter>
+                        </Results>
+                      </ActionStep>
+                      <ActionStep Id="d31d8d83-8269-48a5-a5c7-9e4dbb8096ea" GroupType="MycroTools.Programming" StepType="IfElse">
+                        <Branches>
+                          <Branch>
+                            <Condition>
+                              <Expression Type="IsEquals">
+                                <UnaryOperator Type="None" />
+                                <ExpressionItem Type="ActionStep" Position="Left">
+                                  <Parameters>
+                                    <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                      <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                    </Parameter>
+                                    <Parameter Name="Search Target" ContextScope="Fixed">
+                                      <Value>ResultList</Value>
+                                    </Parameter>
+                                    <Parameter Name="Search List" ContextScope="Fixed">
+                                      <Parameters>
+                                        <Parameter Name="Data" ContextScope="Fixed">
+                                          <Value>Data</Value>
+                                        </Parameter>
+                                        <Parameter Name="Row" ContextScope="Fixed">
+                                          <Value>Row</Value>
+                                        </Parameter>
+                                        <Parameter Name="Tag" ContextScope="Fixed" RefId="ee698f18-7035-46ef-9599-47b37f3c9565">
+                                          <Value>Tag</Value>
+                                        </Parameter>
+                                      </Parameters>
+                                    </Parameter>
+                                  </Parameters>
+                                </ExpressionItem>
+                                <ExpressionItem Type="FixedValue" Position="Right">
+                                  <Parameters>
+                                    <Parameter Name="FixedValue" ContextScope="Fixed">
+                                      <Value>XENC_LOGIN</Value>
+                                    </Parameter>
+                                  </Parameters>
+                                </ExpressionItem>
+                              </Expression>
+                            </Condition>
+                            <ActionSteps>
+                              <ActionStep Id="d2df0e17-415b-4061-b209-da790b4297ef" GroupType="MycroTools.Programming" StepType="IfElse">
+                                <Branches>
+                                  <Branch>
+                                    <Condition>
+                                      <Expression Type="IsEquals">
+                                        <UnaryOperator Type="None" />
+                                        <ExpressionItem Type="ContextIdentifier" Position="Left">
+                                          <Parameters>
+                                            <Parameter Name="ContextIdentifier" ContextScope="Local" ContextType="Variables" ContextIdentifier="Data">
+                                              <Value />
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                        <ExpressionItem Type="FixedValue" Position="Right">
+                                          <Parameters>
+                                            <Parameter Name="FixedValue" ContextScope="Fixed">
+                                              <Value>testuser|1234</Value>
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                      </Expression>
+                                    </Condition>
+                                    <ActionSteps>
+                                      <ActionStep Id="d6eb24d7-24a2-4501-ab92-b2fa0f830cc2" GroupType="MycroTools.Programming" StepType="IdentifierSet">
+                                        <Arguments>
+                                          <Parameter Name="Target" ContextScope="Local" ContextType="Variables" ContextIdentifier="IsLogged">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Source" ContextScope="Fixed">
+                                            <Value>True</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                        <Results>
+                                          <Parameter Name="Value" ContextScope="Fixed">
+                                            <Value />
+                                          </Parameter>
+                                        </Results>
+                                      </ActionStep>
+                                      <ActionStep Id="f565c787-d2de-498f-8f69-fbeaee0a2e6e" GroupType="MycroTools.Windows" StepType="Tcp Server Send">
+                                        <Arguments>
+                                          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Address" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="30463520-92c0-4197-932f-ed56ed8b1c9b">
+                                                      <Value>Address</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>127.0.0.1</Value>
+                                          </Parameter>
+                                          <Parameter Name="Port" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="5e9aaf45-fcd5-471b-9bc5-16633734672c">
+                                                      <Value>Client Port</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>80</Value>
+                                          </Parameter>
+                                          <Parameter Name="Tag" ContextScope="Fixed">
+                                            <Value>ACKNOWLEDGE</Value>
+                                          </Parameter>
+                                          <Parameter Name="Data" ContextScope="Fixed">
+                                            <Value>8</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                      </ActionStep>
+                                    </ActionSteps>
+                                  </Branch>
+                                  <Branch>
+                                    <ActionSteps>
+                                      <ActionStep Id="a6e47d22-808f-4d57-af37-2d870bd4abc6" GroupType="MycroTools.Windows" StepType="Tcp Server Send">
+                                        <Arguments>
+                                          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Address" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="30463520-92c0-4197-932f-ed56ed8b1c9b">
+                                                      <Value>Address</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>127.0.0.1</Value>
+                                          </Parameter>
+                                          <Parameter Name="Port" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="5e9aaf45-fcd5-471b-9bc5-16633734672c">
+                                                      <Value>Client Port</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>80</Value>
+                                          </Parameter>
+                                          <Parameter Name="Tag" ContextScope="Fixed">
+                                            <Value>Response</Value>
+                                          </Parameter>
+                                          <Parameter Name="Data" ContextScope="Fixed">
+                                            <Value>ERROR</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                      </ActionStep>
+                                    </ActionSteps>
+                                  </Branch>
+                                </Branches>
+                              </ActionStep>
+                            </ActionSteps>
+                          </Branch>
+                          <Branch>
+                            <ActionSteps>
+                              <ActionStep Id="131bfed1-a3e3-49c2-b3c5-991ea347f76f" GroupType="MycroTools.Programming" StepType="IfElse">
+                                <Branches>
+                                  <Branch>
+                                    <Condition>
+                                      <Expression Type="IsEquals">
+                                        <UnaryOperator Type="None" />
+                                        <ExpressionItem Type="ContextIdentifier" Position="Left">
+                                          <Parameters>
+                                            <Parameter Name="ContextIdentifier" ContextScope="Local" ContextType="Variables" ContextIdentifier="IsLogged">
+                                              <Value />
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                        <ExpressionItem Type="FixedValue" Position="Right">
+                                          <Parameters>
+                                            <Parameter Name="FixedValue" ContextScope="Fixed">
+                                              <Value>True</Value>
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                      </Expression>
+                                    </Condition>
+                                    <ActionSteps>
+                                      <ActionStep Id="8f4b3ce2-4f5d-4507-92ff-597a6be77972" GroupType="MycroTools.Programming" StepType="Concat">
+                                        <Arguments>
+                                          <Parameter Name="Concat Strings" ContextScope="Fixed">
+                                            <Parameters>
+                                              <Parameter Name="Replacement 0" ContextScope="Reference">
+                                                <Reference>
+                                                  <Parameters>
+                                                    <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                      <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                    </Parameter>
+                                                    <Parameter Name="Search Target" ContextScope="Fixed">
+                                                      <Value>ResultList</Value>
+                                                    </Parameter>
+                                                    <Parameter Name="Search List" ContextScope="Fixed">
+                                                      <Parameters>
+                                                        <Parameter Name=" 0" ContextScope="Fixed">
+                                                          <Value>Data</Value>
+                                                        </Parameter>
+                                                        <Parameter Name=" 1" ContextScope="Fixed">
+                                                          <Value>Row</Value>
+                                                        </Parameter>
+                                                        <Parameter Name=" 2" ContextScope="Fixed">
+                                                          <Value>Data</Value>
+                                                        </Parameter>
+                                                      </Parameters>
+                                                      <Value>ResultList</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                </Reference>
+                                                <Value>leche ka</Value>
+                                              </Parameter>
+                                            </Parameters>
+                                            <Value>info: Received message is '{0}'</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                        <Results>
+                                          <Parameter Name="Result" ContextScope="Fixed" Id="25f59573-1296-464b-825f-55048358b730">
+                                            <Value />
+                                          </Parameter>
+                                        </Results>
+                                      </ActionStep>
+                                      <ActionStep Id="0316a4eb-f9b3-454b-8ea2-9c58ab7acdb4" GroupType="MycroTools.Windows" StepType="Tcp Server Send">
+                                        <Arguments>
+                                          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Address" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="30463520-92c0-4197-932f-ed56ed8b1c9b">
+                                                      <Value>Address</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>127.0.0.1</Value>
+                                          </Parameter>
+                                          <Parameter Name="Port" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="5e9aaf45-fcd5-471b-9bc5-16633734672c">
+                                                      <Value>Client Port</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>80</Value>
+                                          </Parameter>
+                                          <Parameter Name="Tag" ContextScope="Fixed">
+                                            <Value>Response</Value>
+                                          </Parameter>
+                                          <Parameter Name="Data" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>8f4b3ce2-4f5d-4507-92ff-597a6be77972</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed" RefId="25f59573-1296-464b-825f-55048358b730">
+                                                      <Value>Result</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value />
+                                          </Parameter>
+                                        </Arguments>
+                                      </ActionStep>
+                                    </ActionSteps>
+                                  </Branch>
+                                  <Branch>
+                                    <ActionSteps>
+                                      <ActionStep Id="55a62492-b7d2-4690-bd5d-6cf6c65f7be6" GroupType="MycroTools.Windows" StepType="Tcp Server Send">
+                                        <Arguments>
+                                          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Address" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="30463520-92c0-4197-932f-ed56ed8b1c9b">
+                                                      <Value>Address</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>127.0.0.1</Value>
+                                          </Parameter>
+                                          <Parameter Name="Port" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="5e9aaf45-fcd5-471b-9bc5-16633734672c">
+                                                      <Value>Client Port</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>80</Value>
+                                          </Parameter>
+                                          <Parameter Name="Tag" ContextScope="Fixed">
+                                            <Value>Response</Value>
+                                          </Parameter>
+                                          <Parameter Name="Data" ContextScope="Fixed">
+                                            <Value>ERROR</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                      </ActionStep>
+                                    </ActionSteps>
+                                  </Branch>
+                                </Branches>
+                              </ActionStep>
+                            </ActionSteps>
+                          </Branch>
+                        </Branches>
+                      </ActionStep>
+                      <ActionStep Id="fcaa743f-6c32-4764-b9ad-052eaf0332f1" GroupType="MycroTools.Programming" StepType="IfElse">
+                        <Branches>
+                          <Branch>
+                            <Condition>
+                              <Expression Type="IsEquals">
+                                <UnaryOperator Type="None" />
+                                <ExpressionItem Type="ContextIdentifier" Position="Left">
+                                  <Parameters>
+                                    <Parameter Name="ContextIdentifier" ContextScope="Local" ContextType="Variables" ContextIdentifier="IsLogged">
+                                      <Value />
+                                    </Parameter>
+                                  </Parameters>
+                                </ExpressionItem>
+                                <ExpressionItem Type="FixedValue" Position="Right">
+                                  <Parameters>
+                                    <Parameter Name="FixedValue" ContextScope="Fixed">
+                                      <Value>True</Value>
+                                    </Parameter>
+                                  </Parameters>
+                                </ExpressionItem>
+                              </Expression>
+                            </Condition>
+                            <ActionSteps>
+                              <ActionStep Id="d7230206-9dea-4e1f-b0de-8f1d8a39e8c9" GroupType="MycroTools.Programming" StepType="While">
+                                <Branches>
+                                  <Branch>
+                                    <Condition>
+                                      <Expression Type="IsEquals">
+                                        <UnaryOperator Type="None" />
+                                        <ExpressionItem Type="FixedValue" Position="Left">
+                                          <Parameters>
+                                            <Parameter Name="FixedValue" ContextScope="Fixed">
+                                              <Value>True</Value>
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                        <ExpressionItem Type="FixedValue" Position="Right">
+                                          <Parameters>
+                                            <Parameter Name="FixedValue" ContextScope="Fixed">
+                                              <Value>True</Value>
+                                            </Parameter>
+                                          </Parameters>
+                                        </ExpressionItem>
+                                      </Expression>
+                                    </Condition>
+                                    <ActionSteps>
+                                      <ActionStep Id="f9854e85-1366-4f1c-a85d-0f3dde7267c2" GroupType="MycroTools.Windows" StepType="Tcp Server Send">
+                                        <Arguments>
+                                          <Parameter Name="Name" ContextScope="Local" ContextType="Variables" ContextIdentifier="TcpServer_Name">
+                                            <Value />
+                                          </Parameter>
+                                          <Parameter Name="Address" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="30463520-92c0-4197-932f-ed56ed8b1c9b">
+                                                      <Value>Address</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>127.0.0.1</Value>
+                                          </Parameter>
+                                          <Parameter Name="Port" ContextScope="Reference">
+                                            <Reference>
+                                              <Parameters>
+                                                <Parameter Name="ActionStep Reference" ContextScope="Fixed">
+                                                  <Value>2506d422-ca01-469b-b8b2-5f6189188f05</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search Target" ContextScope="Fixed">
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                                <Parameter Name="Search List" ContextScope="Fixed">
+                                                  <Parameters>
+                                                    <Parameter Name=" 0" ContextScope="Fixed">
+                                                      <Value>Data</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 1" ContextScope="Fixed">
+                                                      <Value>Row</Value>
+                                                    </Parameter>
+                                                    <Parameter Name=" 2" ContextScope="Fixed" RefId="5e9aaf45-fcd5-471b-9bc5-16633734672c">
+                                                      <Value>Client Port</Value>
+                                                    </Parameter>
+                                                  </Parameters>
+                                                  <Value>ResultList</Value>
+                                                </Parameter>
+                                              </Parameters>
+                                            </Reference>
+                                            <Value>80</Value>
+                                          </Parameter>
+                                          <Parameter Name="Tag" ContextScope="Fixed">
+                                            <Value>XENC_PUSH_MESSAGE</Value>
+                                          </Parameter>
+                                          <Parameter Name="Data" ContextScope="Fixed">
+                                            <Value>This is a test|Information|OK</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                      </ActionStep>
+                                      <ActionStep Id="38beaca5-523a-4f40-8fdf-90df6a927b99" GroupType="MycroTools.Programming" StepType="TimerWait">
+                                        <Arguments>
+                                          <Parameter Name="Wait Time" ContextScope="Fixed">
+                                            <Value>5000</Value>
+                                          </Parameter>
+                                        </Arguments>
+                                        <Results>
+                                          <Parameter Name="Wait" ContextScope="Fixed">
+                                            <Value>0</Value>
+                                          </Parameter>
+                                        </Results>
+                                      </ActionStep>
+                                    </ActionSteps>
+                                  </Branch>
+                                </Branches>
+                              </ActionStep>
+                            </ActionSteps>
+                          </Branch>
+                          <Branch>
+                            <ActionSteps />
+                          </Branch>
+                        </Branches>
+                      </ActionStep>
+                    </ActionSteps>
+                  </Branch>
+                </Branches>
+              </ActionStep>
+            </ActionSteps>
+          </Branch>
+          <Branch>
+            <ActionSteps>
+              <ActionStep Id="44cd4957-801d-485d-a634-5a228c1e0fbb" GroupType="MycroTools.Programming" StepType="TimerWait">
+                <Arguments>
+                  <Parameter Name="Wait Time" ContextScope="Fixed">
+                    <Value>50</Value>
+                  </Parameter>
+                </Arguments>
+                <Results>
+                  <Parameter Name="Wait" ContextScope="Fixed">
+                    <Value>0</Value>
+                  </Parameter>
+                </Results>
+              </ActionStep>
+            </ActionSteps>
+          </Branch>
+        </Branches>
+      </ActionStep>
+      <ActionStep Id="42fce01c-3878-4db4-a19b-2dacd3f02ed9" GroupType="MycroTools.Programming" StepType="Goto">
+        <Arguments>
+          <Parameter Name="Label" ContextScope="Local" ContextType="Labels" ContextIdentifier="Label 1">
+            <Value />
+          </Parameter>
+        </Arguments>
+      </ActionStep>
+    </ActionSteps>
+  </ActionScript>
+</MycroTools>

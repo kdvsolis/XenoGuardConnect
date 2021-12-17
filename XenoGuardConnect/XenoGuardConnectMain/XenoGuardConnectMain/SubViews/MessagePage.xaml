@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XenoGuardConnectMain.SubViews.MessagePage"
+             xmlns:local="clr-namespace:XenoGuardConnectMain"
+             xmlns:dxe="http://schemas.devexpress.com/xamarin/2014/forms/editors"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <StackLayout>
+        <ListView x:Name="messageList" ItemTapped="OnItemTapped" BackgroundColor="#2088ff" Margin="10, 10, 10, 0" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="40"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox Grid.Column="1" IsChecked="{Binding isChecked , Mode=TwoWay}" CheckedChanged="OnCheckedChanged" />
+                            <StackLayout Grid.Column="2" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                                <Label Text="{Binding Time}" TextColor="White"/>
+                                <Label Text="{Binding Message}" TextColor="White"/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout VerticalOptions="End" Margin="10, 0, 10, 15">
+            <!-- bottom controls -->
+            <dxe:SimpleButton Text="Delete Selected" Clicked="ButtonDeleteSelected" />
+            <dxe:SimpleButton Text="Back" Clicked="ButtonNavigateBack" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
