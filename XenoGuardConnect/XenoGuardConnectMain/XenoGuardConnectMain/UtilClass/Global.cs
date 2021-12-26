@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XenoGuardConnectMain;
 using XenoGuardConnectMain.Interfaces;
 
 namespace XenoGuardConnect.UtilClass
@@ -34,11 +35,11 @@ namespace XenoGuardConnect.UtilClass
         };
 
         #region Members
-        static string ipAddress = "85.215.216.184";
-        static int port = 443;
-        static string password = "";
-        static string serverPassword = "1234";
-        static string username = "";
+        static string ipAddress = Settings.ipAddress;
+        static int port = Settings.port;
+        static string password = Settings.password;
+        static string serverPassword = Settings.serverPassword;
+        static string username = Settings.username;
         private static Connection socketConnection;
         private static ObservableCollection<MessageStructure> messages = new ObservableCollection<MessageStructure>() { };
         private static INotificationManager notificationManager;
