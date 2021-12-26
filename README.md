@@ -7,18 +7,18 @@ XenoGuard Connect is a mobile app written in Xamarin Forms(C# based) for connect
 - Build this app
 - Deploy to either real mobile device or emulator
 
-## Usage
+## App Usage
 
-- Login using your registered account on the server
+- Login using your registered account on the server<br/>
 ![Login](https://i.postimg.cc/GpTQ2w4Y/Screenshot-20211226-235322.jpg)
-- You may choose to view the message or do settings change
+- You may choose to view the message or do settings change<br/>
 ![MainMenu](https://i.postimg.cc/DwksgJ0W/Screenshot-20211227-004133.jpg)
-- If you choose to view messages, you can select in the list of messages which detail you want to view among them
+- If you choose to view messages, you can select in the list of messages which detail you want to view among them<br/>
 ![MessageView](https://i.postimg.cc/0yBnP2yP/Screenshot-20211227-000740.jpg)
-- As you select, you may see the message information details for that particular message
+- As you select, you may see the message information details for that particular message<br/>
 ![MessageDetails](https://i.postimg.cc/9M3Bw89k/Screenshot-20211227-000817.jpg)
-- You can also receive messages in the background
+- You can also receive messages in the background<br/>
 ![Notification](https://i.postimg.cc/J4RPQ2FV/Screenshot-20211226-235356.jpg)
-- If you want to have some sound, you can change it at the Settings page
+- If you want to have some sound, you can change it at the Settings page<br/>
 ![Notification](https://i.postimg.cc/DwksgJ0W/Screenshot-20211227-004133.jpg)
  
